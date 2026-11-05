@@ -15,7 +15,6 @@ jobs:
       run: |
         docker run --rm \
           -v ${{ github.workspace }}:/home/developer/app \
-          -u root \
           kivy/buildozer android debug
 
     - name: Upload APK Artifact
@@ -23,4 +22,3 @@ jobs:
       with:
         name: BiscaBalatro-APK
         path: bin/*.apk
-
